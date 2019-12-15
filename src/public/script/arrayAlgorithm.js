@@ -4,7 +4,8 @@ export default function arrayAlgorithms() {
     fibonacci,
     shuffleArray,
     isSorted,
-    binarySearch
+    binarySearch,
+    bubbleSort
   };
 
   /**
@@ -92,7 +93,7 @@ export default function arrayAlgorithms() {
   /**
    * binarySearch, searches a array through a binarySearch.
    * #### Takeaways:
-   * -
+   * - Logic, manipulating the while loop conditionally
    * @name binarySearch
    * @param {array} array the array to be checked against target
    * @param {number} target the target to be found
@@ -126,5 +127,44 @@ export default function arrayAlgorithms() {
     }
 
     return -1;
+  }
+
+
+  /**
+   * bubbleSort, sorting a array using bubble sorting.
+   * #### Takeaways:
+   * - prac makes perfection
+   * @name bubbleSort
+   * @param {array} array the array to be checked against target
+   * @example [122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213]
+   * @returns {number} returns the sorted array
+   */
+  function bubbleSort(array = []) {
+
+    if (!(Array.isArray(array))) { return []; }
+
+    let length = array.length;
+    let found;
+
+    do {
+
+      let i = 0;
+      found = false;
+
+      for (i; i < length; i++) {
+
+        if (array[i] > array[i + 1]) {
+
+          let temp = array[i + 1];
+
+          array[i + 1] = array[i];
+          array[i] = temp;
+
+          found = true;
+        }
+      }
+    } while(found)
+
+    return array;
   }
 }

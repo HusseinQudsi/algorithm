@@ -18,11 +18,10 @@ describe('arrayAlgorithms', () => {
 
       it('fibonaacci, bad input: "a" as input.', () => {
 
-        const z = arrayAlgorithmFnc.fibonacci("a");
-        const zz = [];
+        const result = arrayAlgorithmFnc.fibonacci("a");
 
-        expect(z).to.be.an('array');
-        expect(zz).to.include.ordered.members(zz);
+        expect(result).to.be.an('array');
+        expect(result).to.include.ordered.members([]);
       });
     });
 
@@ -105,4 +104,26 @@ describe('arrayAlgorithms', () => {
         expect(result2).to.equal(-1);
       });
     });
+
+    describe('binarySearch algorithm', () => {
+
+      const input = [122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213];
+
+      it(`bubbleSort: ${input} as input.`, () => {
+
+        debugger;
+        const result = arrayAlgorithmFnc.bubbleSort(input);
+
+        expect(result).to.include.ordered.members([1,9,23,64,84,98,122,213,234,455,3223]);
+      });
+
+      it('bubbleSort, bad input: "a" as input.', () => {
+
+        const result = arrayAlgorithmFnc.bubbleSort("a");
+
+        expect(result).to.be.an('array');
+        expect(result).to.include.ordered.members([]);
+      });
+    });
+
 });

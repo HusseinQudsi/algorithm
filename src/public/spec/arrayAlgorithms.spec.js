@@ -44,4 +44,31 @@ describe('arrayAlgorithms', () => {
       });
 
     });
+
+    describe('isSorted algorithm', () => {
+
+      it('isSorted: [6,3,4,5] as input, should return false', () => {
+
+        const input = [6,3,4,5];
+        const result = arrayAlgorithmFnc.isSorted(input.concat([]));
+
+        expect(result).to.be.false;
+      });
+
+      it('isSorted: [0,3,4,8] as input, should return true', () => {
+
+        const input = [0,3,4,8];
+        const result = arrayAlgorithmFnc.isSorted(input.concat([]));
+
+        expect(result).to.be.true;
+      });
+
+      it('isSorted: [0,3,4,8] as input, should return true', () => {
+
+        const result = arrayAlgorithmFnc.isSorted("a");
+        expect(result).to.be.false;
+      });
+
+    });
+
 });

@@ -3,7 +3,7 @@ export default function arrayAlgorithms() {
   return {
     fibonacci,
     shuffleArray,
-    // isSorted,
+    isSorted,
     // filter,
     // missing,
     // intersection,
@@ -63,5 +63,32 @@ export default function arrayAlgorithms() {
     }
 
     return array;
+  }
+
+  /**
+   * isSorted, if a array is sorted
+   * Take aways:
+   * - Reverse Array
+   * @name isSorted
+   * @param {array} array the array to be checked if sorted
+   * @example [1, 2, 144, 200]
+   * @returns {array} return boolean
+   */
+  function isSorted(array = []) {
+
+    if (!(Array.isArray(array))) { return false; }
+
+    let i = 0;
+    let lastIndex = (array.length - 1);
+
+    for (lastIndex; lastIndex > i; lastIndex--) {
+
+      if (array[lastIndex] < array[lastIndex - 1]) {
+
+        return false;
+      }
+    }
+
+    return true;
   }
 }

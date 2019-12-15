@@ -111,6 +111,9 @@ node --inspect-brk server/server
 npm install erring out: permission denied, rmdir 'build'
 fix: "sudo npm install -g --unsafe-perm"
 
+# Documents
+- https://www.npmjs.com/package/documentation
+- https://github.com/documentationjs/documentation/blob/HEAD/docs/GETTING_STARTED.md
 
 # Deployment
 ### All majors platforms support it these days and adhere to conventions to smooth the process even more. Some things to consider when deploying:

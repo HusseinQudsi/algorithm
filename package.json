@@ -6,7 +6,10 @@
   "license": "MIT",
   "heroku-run-build-script": true,
   "scripts": {
+    "client-docs": "documentation build src/public/**/*.js -f html -o src/documentation/client docs",
     "build": "babel src --copy-files --out-dir dist",
+    "test-client-brk": "npm run build && mocha dist/public/spec --recursive --exit --debug-brk",
+    "test-client": "npm run build && mocha dist/public/spec --recursive --exit",
     "test": "npm run build && mocha dist/server/spec --recursive --exit",
     "test-brk": "npm run build && mocha dist/server/spec --recursive --exit --debug-brk",
     "dev": "nodemon --exec npm run restart",

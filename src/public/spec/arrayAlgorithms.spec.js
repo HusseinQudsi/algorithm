@@ -66,9 +66,43 @@ describe('arrayAlgorithms', () => {
       it('isSorted: [0,3,4,8] as input, should return true', () => {
 
         const result = arrayAlgorithmFnc.isSorted("a");
+
         expect(result).to.be.false;
       });
 
     });
 
+    describe('binarySearch algorithm', () => {
+
+      const input = [1,2,3,4,5,6,7,8,9,10];
+      const target = 1;
+
+      it(`binarySearch: ${input} as input and ${target} as the target. Should return index 0`, () => {
+
+        const result = arrayAlgorithmFnc.binarySearch(input, target);
+
+        expect(result).to.equal(0);
+      });
+
+      const input2 = [1,2,3,4,5,6,7,8,9,10];
+      const target2 = 10;
+
+      it(`binarySearch: ${input2} as input and ${target2} as the target. Should return index 9`, () => {
+
+        const result = arrayAlgorithmFnc.binarySearch(input2, target2);
+
+        expect(result).to.equal(9);
+      });
+
+      it("binarySearch, bad input: missing parameters", () => {
+
+        const result1 = arrayAlgorithmFnc.binarySearch([]);
+
+        expect(result1).to.equal(-1);
+
+        const result2 = arrayAlgorithmFnc.binarySearch(undefined,0);
+
+        expect(result2).to.equal(-1);
+      });
+    });
 });

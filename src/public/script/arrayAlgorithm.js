@@ -37,6 +37,9 @@ export default function arrayAlgorithms() {
 
   /**
    * Shuffling a array's positions.
+   * Take aways:
+   * - Reverse loops
+   * - Moving a array indexes around, within the array
    * @name shuffleArray
    * @param {array} array the array to be shuffled
    * @example [1, 2, 144, 200]
@@ -44,30 +47,21 @@ export default function arrayAlgorithms() {
    */
   function shuffleArray(array = []) {
 
+    if (!(Array.isArray(array))) { return []; }
+
+    // Reverse loop:
     let i = (array.length - 1);
 
-    for(i; i > 0; i--){
+    for(i; i > 0; i--) { // i > 0 will not run at last index.
 
-      const j = Math.floor(Math.random() * i)
+      let randomIndexWithInArrayLength = Math.floor(Math.random() * i);
+      let originalPostition = array[i]; // Last index, @example: 200
 
-      const temp = array[i]
-
-      array[i] = array[j]
-      array[j] = temp;
+      // Shuffling:
+      array[i] = array[randomIndexWithInArrayLength];
+      array[randomIndexWithInArrayLength] = originalPostition;
     }
 
     return array;
-
-    // [1, 2, 144, 200]
-
-    // let i = 0
-    // while(array.length > i) { fnc(); r++;}
-    //
-    // function fnc() {
-    //
-    //   array.splice(0, Math.random(array.length))
-    //   array.unshift()
-    // }
-
   }
 }

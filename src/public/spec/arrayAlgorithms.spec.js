@@ -1,10 +1,9 @@
 import arrayAlgorithm from '../script/arrayAlgorithm.js';
-const expect = require('chai').expect;
 
+const expect = require('chai').expect;
+const arrayAlgorithmFnc = arrayAlgorithm();
 
 describe('arrayAlgorithms', () => {
-
-    const arrayAlgorithmFnc = arrayAlgorithm();
 
     describe('fibonaacci algorithm', () => {
 
@@ -27,5 +26,22 @@ describe('arrayAlgorithms', () => {
       });
     });
 
+    describe('shuffle algorithm', () => {
 
+      it('shuffle: [5,2,1,3] as input.', () => {
+
+        const input = [5,2,1,3];
+        const result = arrayAlgorithmFnc.shuffleArray(input.concat([]));
+
+        expect(result).to.be.an('array');
+        expect(result).to.include.not.ordered.members(input);
+      });
+
+      it('shuffle, bad input: "a" as input.', () => {
+
+        const result = arrayAlgorithmFnc.shuffleArray("a");
+        expect(result).to.be.an('array').that.is.empty;
+      });
+
+    });
 });

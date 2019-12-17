@@ -1,3 +1,6 @@
+// https://www.youtube.com/watch?v=0cB4D65vsIQ&list=PL6cactdCCnTK7Su3WF--4jZdd5K-vk_78
+// https://github.com/trekhleb/javascript-algorithms#data-structures
+
 export default function arrayAlgorithms() {
 
   return {
@@ -48,15 +51,15 @@ export default function arrayAlgorithms() {
     if (!(Array.isArray(array))) { return []; }
 
     // Reverse loop:
-    let i = (array.length - 1);
+    let lastIndex = (array.length - 1);
 
-    for(i; i > 0; i--) { // i > 0 will not run at last index.
+    for(lastIndex; lastIndex > 0; lastIndex--) { // i > 0 will not run at last index.
 
-      let randomIndexWithInArrayLength = Math.floor(Math.random() * i);
-      let originalPostition = array[i]; // Last index, @example: 200
+      let randomIndexWithInArrayLength = Math.floor(Math.random() * lastIndex);
+      let originalPostition = array[lastIndex]; // Last index, @example: 200
 
       // Shuffling:
-      array[i] = array[randomIndexWithInArrayLength];
+      array[lastIndex] = array[randomIndexWithInArrayLength];
       array[randomIndexWithInArrayLength] = originalPostition;
     }
 
@@ -128,7 +131,6 @@ export default function arrayAlgorithms() {
 
     return -1;
   }
-
 
   /**
    * bubbleSort, sorting a array using bubble sorting.

@@ -53,10 +53,10 @@ export default function arrayAlgorithms() {
     // Reverse loop:
     let lastIndex = (array.length - 1);
 
-    for(lastIndex; lastIndex > 0; lastIndex--) { // i > 0 will not run at last index.
+    for(lastIndex; lastIndex > 0; lastIndex--) {
 
       let randomIndexWithInArrayLength = Math.floor(Math.random() * lastIndex);
-      let originalPostition = array[lastIndex]; // Last index, @example: 200
+      let originalPostition = array[lastIndex];
 
       // Shuffling:
       array[lastIndex] = array[randomIndexWithInArrayLength];
@@ -170,3 +170,22 @@ export default function arrayAlgorithms() {
     return array;
   }
 }
+
+class LinkedListNode {
+    constructor(data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+
+// https://humanwhocodes.com/blog/2019/01/computer-science-in-javascript-linked-list/
+// debugger;
+// // create the first node
+// const head = new LinkedListNode(12);
+//
+// // add a second node
+// head.next = new LinkedListNode(99);
+//
+// // add a third node
+// head.next.next = new LinkedListNode(37);

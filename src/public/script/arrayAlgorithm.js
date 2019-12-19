@@ -79,10 +79,9 @@ export default function arrayAlgorithms() {
 
     if (!(Array.isArray(array))) { return false; }
 
-    let i = 0;
     let lastIndex = (array.length - 1);
 
-    for (lastIndex; lastIndex > i; lastIndex--) {
+    for (lastIndex; lastIndex > 0; lastIndex--) {
 
       if (array[lastIndex] < array[lastIndex - 1]) {
 

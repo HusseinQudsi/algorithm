@@ -105,13 +105,12 @@ describe('arrayAlgorithms', () => {
       });
     });
 
-    describe('binarySearch algorithm', () => {
+    describe('bubbleSort algorithm', () => {
 
       const input = [122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213];
 
       it(`bubbleSort: ${input} as input.`, () => {
 
-        debugger;
         const result = arrayAlgorithmFnc.bubbleSort(input);
 
         expect(result).to.include.ordered.members([1,9,23,64,84,98,122,213,234,455,3223]);
@@ -126,4 +125,18 @@ describe('arrayAlgorithms', () => {
       });
     });
 
+    describe('factorial algorithm', () => {
+
+      it(`factorial: should return factorial value`, () => {
+
+        const result = arrayAlgorithmFnc.factorial([2,3,4]);
+        expect(result).to.equal(24);
+      });
+
+      it(`factorial: should return factorial value`, () => {
+
+        const result = arrayAlgorithmFnc.factorial("bad");
+        expect(result).to.equal(0);
+      });
+    });
 });

@@ -8,7 +8,8 @@ export default function arrayAlgorithms() {
     shuffleArray,
     isSorted,
     binarySearch,
-    bubbleSort
+    bubbleSort,
+    factorial
   };
 
   /**
@@ -168,14 +169,57 @@ export default function arrayAlgorithms() {
 
     return array;
   }
+
+
+  /**
+   * bubbleSort, sorting a array using bubble sorting.
+   * #### Takeaways:
+   * - prac makes perfection
+   * @name factorial
+   * @param {array} array the array to be checked against target
+   * @example factorial [122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213]
+   * @returns {number} returns the factorial number value of the array.
+   */
+  function factorial(array = []) {
+
+    if (!(Array.isArray(array))) { return 0; }
+
+    let factorial = 1;
+    let length = (array.length - 1);
+
+    for(length; length >= 0; length--) {
+
+      factorial = factorial * array[length];
+    }
+
+    return factorial;
+  }
+
 }
 
-class LinkedListNode {
-    constructor(data) {
-        this.data = data;
-        this.next = null;
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// class LinkedListNode {
+//     constructor(data) {
+//         this.data = data;
+//         this.next = null;
+//     }
+// }
 
 
 // https://humanwhocodes.com/blog/2019/01/computer-science-in-javascript-linked-list/

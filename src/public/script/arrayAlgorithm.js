@@ -172,11 +172,9 @@ export default function arrayAlgorithms() {
 
 
   /**
-   * bubbleSort, sorting a array using bubble sorting.
-   * #### Takeaways:
-   * - prac makes perfection
+   * factorial, the factorial of the array.
    * @name factorial
-   * @param {array} array the array to be checked against target
+   * @param {array} array the array to be caculated
    * @example factorial [122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213]
    * @returns {number} returns the factorial number value of the array.
    */

@@ -21,13 +21,8 @@ const htmlFilePath = path.join(dir + fileConfig.index);
 
 processHtml(htmlFilePath);
 
-export const start = async () => {
-
-  try {
-
-    return app.listen(config.port, () => (
-      config.log.logs && console.log(`REST API on http://localhost:${config.port}/`))
-    )
-
-  } catch (e) { config.log.error && console.error(e) }
-}
+export const server = () => (
+  app.listen(config.port, () => (
+    config.log.logs && console.log(`REST API on http://localhost:${config.port}/`))
+  )
+)

@@ -1,7 +1,7 @@
 // https://www.youtube.com/watch?v=0cB4D65vsIQ&list=PL6cactdCCnTK7Su3WF--4jZdd5K-vk_78
 // https://github.com/trekhleb/javascript-algorithms#data-structures
 
-export function arrayAlgorithms() {
+export default function arrayAlgorithms() {
 
   /**
    * fibonacci array function.

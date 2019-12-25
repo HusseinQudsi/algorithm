@@ -40,4 +40,32 @@ describe('numberAlgorithm', () => {
       });
     });
 
+    describe('greatestCommonDivisor algorithm', () => {
+
+      it('greatestCommonDivisor(104, 84): false', () => {
+
+        const result = numberAlgorithmFnc.greatestCommonDivisor(104, 84);
+
+        expect(result).to.be.an('number');
+        expect(result).to.equal(4);
+      });
+
+      it('greatestCommonDivisor(84, 104): false', () => {
+
+        const result = numberAlgorithmFnc.greatestCommonDivisor(84, 104);
+
+        expect(result).to.be.an('number');
+        expect(result).to.equal(4);
+      });
+
+      it('greatestCommonDivisor("bad", "input"): false', () => {
+
+        const result = numberAlgorithmFnc.greatestCommonDivisor("bad", "input");
+
+        expect(result).to.be.an('number');
+        expect(result).to.equal(0);
+      });
+
+    });
+
 });

@@ -1,4 +1,4 @@
-import arrayAlgorithm from '../script/arrayAlgorithm.js';
+import arrayAlgorithm from '../script/algorithms/arrayAlgorithm.js';
 
 const expect = require('chai').expect;
 const arrayAlgorithmFnc = arrayAlgorithm();

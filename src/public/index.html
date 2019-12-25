@@ -1,13 +1,670 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Base Node App</title>
-  <script type="text/javascript" src="/script/arrayAlgorithm.js"></script>
+  <meta charset='utf-8'>
+  <title>api-design-v3 1.0.0 | Documentation</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='assets/bass.css' rel='stylesheet'>
+  <link href='assets/style.css' rel='stylesheet'>
+  <link href='assets/github.css' rel='stylesheet'>
+  <link href='assets/split.css' rel='stylesheet'>
 </head>
-<body>
-  <main>
-    wrong
-  </main>
+<body class='documentation m0'>
+    <div class='flex'>
+      <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
+        <div class='py1 px2'>
+          <h3 class='mb0 no-anchor'>api-design-v3</h3>
+          <div class='mb1'><code>1.0.0</code></div>
+          <input
+            placeholder='Filter'
+            id='filter-input'
+            class='col12 block input'
+            type='text' />
+          <div id='toc'>
+            <ul class='list-reset h5 py1-ul'>
+              
+                
+                <li><a
+                  href='#fibonacci'
+                  class="">
+                  fibonacci
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#shufflearray'
+                  class="">
+                  shuffleArray
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#issorted'
+                  class="">
+                  isSorted
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#binarysearch'
+                  class="">
+                  binarySearch
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#bubblesort'
+                  class="">
+                  bubbleSort
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#factorial'
+                  class="">
+                  factorial
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#factorial'
+                  class="">
+                  factorial
+                  
+                </a>
+                
+                </li>
+              
+            </ul>
+          </div>
+          <div class='mt1 h6 quiet'>
+            <a href='https://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
+          </div>
+        </div>
+      </div>
+      <div id='split-right' class='relative overflow-auto height-viewport-100'>
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='fibonacci'>
+      fibonacci
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>fibonacci array function.</p>
+
+    <div class='pre p1 fill-light mt0'>fibonacci</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>length</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    will return a array of fibonacci sequence at  that length
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a></code>:
+        return the array of fibonacci sequence
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>fibonacci(<span class="hljs-number">10</span>);</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='shufflearray'>
+      shuffleArray
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Shuffling a array's positions.</p>
+<h4>Takeaways:</h4>
+<ul>
+<li>Reverse loops</li>
+<li>Moving a array indexes around, within the array</li>
+</ul>
+
+    <div class='pre p1 fill-light mt0'>shuffleArray</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>array</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a>)</code>
+	    the array to be shuffled
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a></code>:
+        return the shuffled array 
+[1, 2, 200, 144]
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>shuffleArray([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">144</span>, <span class="hljs-number">200</span>]);</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='issorted'>
+      isSorted
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>isSorted, if a array is sorted</p>
+<h4>Takeaways:</h4>
+<ul>
+<li>Reverse Array</li>
+</ul>
+
+    <div class='pre p1 fill-light mt0'>isSorted</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>array</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a>)</code>
+	    the array to be checked if sorted
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a></code>:
+        return boolean
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>isSorted([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">144</span>, <span class="hljs-number">200</span>]);</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='binarysearch'>
+      binarySearch
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>binarySearch, searches a array through a binarySearch.</p>
+<h4>Takeaways:</h4>
+<ul>
+<li>Logic, manipulating the while loop conditionally</li>
+</ul>
+
+    <div class='pre p1 fill-light mt0'>binarySearch</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>array</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a>)</code>
+	    the array to be checked against target
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>target</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    the target to be found
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>:
+        returns the index of input
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>binarySearch([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>,<span class="hljs-number">10</span>], <span class="hljs-number">7</span>);</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='bubblesort'>
+      bubbleSort
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>bubbleSort, sorting a array using bubble sorting.</p>
+<h4>Takeaways:</h4>
+<ul>
+<li>prac makes perfection</li>
+</ul>
+
+    <div class='pre p1 fill-light mt0'>bubbleSort</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>array</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a>)</code>
+	    the array to be checked against target
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>:
+        returns the sorted array
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>bubbleSort([<span class="hljs-number">122</span>, <span class="hljs-number">84</span>, <span class="hljs-number">98</span>, <span class="hljs-number">64</span>, <span class="hljs-number">9</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3223</span>, <span class="hljs-number">455</span>, <span class="hljs-number">23</span>, <span class="hljs-number">234</span>, <span class="hljs-number">213</span>]);</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='factorial'>
+      factorial
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>factorial, the factorial of the array.</p>
+
+    <div class='pre p1 fill-light mt0'>factorial</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>array</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a>)</code>
+	    the array to be caculated
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>:
+        returns the factorial number value of the array.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>factorial([<span class="hljs-number">122</span>, <span class="hljs-number">84</span>, <span class="hljs-number">98</span>, <span class="hljs-number">64</span>, <span class="hljs-number">9</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3223</span>, <span class="hljs-number">455</span>, <span class="hljs-number">23</span>, <span class="hljs-number">234</span>, <span class="hljs-number">213</span>]);</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='factorial'>
+      factorial
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>fibonacci array function.</p>
+
+    <div class='pre p1 fill-light mt0'>factorial</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>length</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    will return a array of fibonacci sequence at  that length
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a></code>:
+        return the array of fibonacci sequence
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>[<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">8</span>, <span class="hljs-number">13</span>, <span class="hljs-number">21</span>, <span class="hljs-number">34</span>, <span class="hljs-number">55</span>, <span class="hljs-number">89</span>, <span class="hljs-number">144</span>]</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+      </div>
+    </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/split.js'></script>
+  <script src='assets/site.js'></script>
 </body>
 </html>

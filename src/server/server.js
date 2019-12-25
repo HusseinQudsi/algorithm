@@ -16,9 +16,9 @@ app.use(cors())
 app.use(json())
 app.use(urlencoded({ extended: true }))
 app.use(morgan('dev'))
-app.use(express.static(dir + '/../public/documentation/client'))
+app.use(express.static(dir + '/../public'))
 
-const htmlFilePath = path.join(dir + '/../public/documentation/client/index.html');
+const htmlFilePath = path.join(dir + '/../public/index.html');
 
 processHtml(htmlFilePath);
 

@@ -1,5 +1,5 @@
 const arrAlgorithm = window.arrayAlgorithms();
-const numAlgorithm = window.numberAlgorithms()
+const numAlgorithm = window.numberAlgorithms();
 
 enrichTextArea();
 populateTextAreaAlgorithms();

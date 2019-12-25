@@ -13,23 +13,42 @@ export default function htmlFilePath(htmlFile) {
   })
 }
 
-function processFile(data, htmlFile) {
+async function processFile(data, htmlFile) {
 
-  // TODO import this from a file config
-  const clientScripts = [
-    `<script>var exports = {};</script>`,
-    `<script type="text/javascript" src="script/algorithms/arrayAlgorithm.js"></script>`,
-    `<script type="text/javascript" src="script/algorithms/numberAlgorithm.js"></script>`,
-    `<script type="text/javascript" src="script/enrichHtml.js"></script>`
-  ];
+  const algorithmsPath = 'src/public/script/algorithms';
 
-  data = (
-    data
-      .toString()
-      .replace(/<\/body>/m, (text) => (
-        `${clientScripts.join('\n')}\n\n${text}`
-      ))
-  );
+  await fs.readdir(algorithmsPath, (err, algorithmsFiles) => {
 
-  fs.writeFileSync(htmlFile, data, {flag: 'w'})
+    if (err) {
+      // TODO add logging
+      console.log('processFile: ' + err);
+      throw new Error(err);
+    }
+
+    const clientScripts = [
+      `<script>var exports = {};</script>`
+    ];
+
+    algorithmsFiles.forEach(file => (
+      clientScripts.push(`
+          <script
+            type="text/javascript"
+            src="script/algorithms/${file}">
+          </script>
+        `)
+    ));
+
+    clientScripts.push(`<script type="text/javascript" src="script/enrichHtml.js"></script>`);
+
+    data = (
+      data
+        .toString()
+        .replace(/<\/body>/m, (text) => (
+          `${clientScripts.join('\n')}\n\n${text}`
+        ))
+    );
+
+    fs.writeFileSync(htmlFile, data, {flag: 'w'})
+
+  });
 }

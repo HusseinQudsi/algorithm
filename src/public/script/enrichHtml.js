@@ -19,9 +19,6 @@ if (typeof window !== 'undefined') {
     el.parentElement.append(div);
   });
 
-
-
-
   const algorithms = Object.assign(arrAlgorithm, numAlgorithm);
   const algorithmsMethodsNames = Object.keys(algorithms);
   const sections = document.querySelectorAll('h3[id]');

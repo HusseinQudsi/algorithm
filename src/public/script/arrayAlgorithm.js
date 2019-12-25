@@ -200,13 +200,23 @@ export default function arrayAlgorithms() {
     }
   );
 
+  /**
+   * factorial, the factorial of the array.
+   * @name test3
+   * @example test3();
+   */
+  function test3() {
+    return a
+  }
+
   return {
     fibonacci,
     shuffleArray,
     isSorted,
     binarySearch,
     bubbleSort,
-    factorial
+    factorial,
+    test3
   };
 }
 

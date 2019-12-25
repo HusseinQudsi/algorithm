@@ -1,4 +1,4 @@
-function numberAlgorithms() {
+export default function numberAlgorithms() {
 
   return {
     factorial

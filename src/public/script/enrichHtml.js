@@ -1,6 +1,5 @@
 if (typeof window !== 'undefined') {
 
-  debugger;
   const arrAlgorithm = window.arrayAlgorithms();
   const numAlgorithm = window.numberAlgorithms()
 

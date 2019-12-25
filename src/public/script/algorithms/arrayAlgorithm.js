@@ -3,6 +3,15 @@
 
 export default function arrayAlgorithms() {
 
+  return {
+    fibonacci,
+    shuffleArray,
+    isSorted,
+    binarySearch,
+    bubbleSort,
+    factorial
+  };
+
   /**
    * fibonacci array function.
    * @name fibonacci
@@ -10,26 +19,23 @@ export default function arrayAlgorithms() {
    * @example fibonacci(10);
    * @returns {array} return the array of fibonacci sequence
    */
-  const fibonacci = (
+  function fibonacci(length = 0) {
 
-    function fibonacci(length = 0) {
+    if (+length !== length) { return []; }
 
-      if (+length !== length) { return []; }
+    const fibonacciArray = [1, 1];
 
-      const fibonacciArray = [1, 1];
+    while (length > 0) {
 
-      while (length > 0) {
+      let atIndex = fibonacciArray[fibonacciArray.length - 2];
+      let nextIndex = fibonacciArray[fibonacciArray.length - 1];
 
-        let atIndex = fibonacciArray[fibonacciArray.length - 2];
-        let nextIndex = fibonacciArray[fibonacciArray.length - 1];
-
-        fibonacciArray.push(atIndex + nextIndex);
-        length--;
-      }
-
-      return fibonacciArray;
+      fibonacciArray.push(atIndex + nextIndex);
+      length--;
     }
-  );
+
+    return fibonacciArray;
+  }
 
   /**
    * Shuffling a array's positions.
@@ -41,27 +47,25 @@ export default function arrayAlgorithms() {
    * @example shuffleArray([1, 2, 144, 200]);
    * @returns {array} return the shuffled array [1, 2, 200, 144]
    */
-  const shuffleArray = (
-    function shuffleArray(array = []) {
+  function shuffleArray(array = []) {
 
-      if (!(Array.isArray(array))) { return []; }
+    if (!(Array.isArray(array))) { return []; }
 
-      // Reverse loop:
-      let lastIndex = (array.length - 1);
+    // Reverse loop:
+    let lastIndex = (array.length - 1);
 
-      for(lastIndex; lastIndex > 0; lastIndex--) {
+    for(lastIndex; lastIndex > 0; lastIndex--) {
 
-        let randomIndexWithInArrayLength = Math.floor(Math.random() * lastIndex);
-        let originalPostition = array[lastIndex];
+      let randomIndexWithInArrayLength = Math.floor(Math.random() * lastIndex);
+      let originalPostition = array[lastIndex];
 
-        // Shuffling:
-        array[lastIndex] = array[randomIndexWithInArrayLength];
-        array[randomIndexWithInArrayLength] = originalPostition;
-      }
-
-      return array;
+      // Shuffling:
+      array[lastIndex] = array[randomIndexWithInArrayLength];
+      array[randomIndexWithInArrayLength] = originalPostition;
     }
-  );
+
+    return array;
+  }
 
   /**
    * isSorted, if a array is sorted
@@ -72,25 +76,22 @@ export default function arrayAlgorithms() {
    * @example isSorted([1, 2, 144, 200]);
    * @returns {array} return boolean
    */
-  const isSorted = (
+  function isSorted(array = []) {
 
-    function isSorted(array = []) {
+    if (!(Array.isArray(array))) { return false; }
 
-      if (!(Array.isArray(array))) { return false; }
+    let lastIndex = (array.length - 1);
 
-      let lastIndex = (array.length - 1);
+    for (lastIndex; lastIndex > 0; lastIndex--) {
 
-      for (lastIndex; lastIndex > 0; lastIndex--) {
+      if (array[lastIndex] < array[lastIndex - 1]) {
 
-        if (array[lastIndex] < array[lastIndex - 1]) {
-
-          return false;
-        }
+        return false;
       }
-
-      return true;
     }
-  );
+
+    return true;
+  }
 
   /**
    * binarySearch, searches a array through a binarySearch.
@@ -102,37 +103,34 @@ export default function arrayAlgorithms() {
    * @example binarySearch([1,2,3,4,5,6,7,8,9,10], 7);
    * @returns {number} returns the index of input
    */
-  const binarySearch = (
+  function binarySearch(array = [], target = 0) {
 
-    function binarySearch(array = [], target = 0) {
+    if (!(Array.isArray(array))) { return -1; }
+    if (+target !== target) { return -1; }
 
-      if (!(Array.isArray(array))) { return -1; }
-      if (+target !== target) { return -1; }
+    let left = 0;
+    let right = (array.length - 1);
 
-      let left = 0;
-      let right = (array.length - 1);
+    while(right >= left) {
 
-      while(right >= left) {
+      let minPoint = (right - left) / 2;
+      let mid = left + Math.floor(minPoint);
 
-        let minPoint = (right - left) / 2;
-        let mid = left + Math.floor(minPoint);
+      if (array[mid] === target) { return mid; }
 
-        if (array[mid] === target) { return mid; }
+      if (array[mid] < target) {
 
-        if (array[mid] < target) {
+          left = mid + 1;
 
-            left = mid + 1;
+      } else {
 
-        } else {
-
-            right = mid - 1;
-        }
-
+          right = mid - 1;
       }
 
-      return -1;
     }
-  );
+
+    return -1;
+  }
 
   /**
    * bubbleSort, sorting a array using bubble sorting.
@@ -143,37 +141,34 @@ export default function arrayAlgorithms() {
    * @example bubbleSort([122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213]);
    * @returns {number} returns the sorted array
    */
-  const bubbleSort = (
+  function bubbleSort(array = []) {
 
-    function bubbleSort(array = []) {
+    if (!(Array.isArray(array))) { return []; }
 
-      if (!(Array.isArray(array))) { return []; }
+    let length = array.length;
+    let found;
 
-      let length = array.length;
-      let found;
+    do {
 
-      do {
+      let i = 0;
+      found = false;
 
-        let i = 0;
-        found = false;
+      for (i; i < length; i++) {
 
-        for (i; i < length; i++) {
+        if (array[i] > array[i + 1]) {
 
-          if (array[i] > array[i + 1]) {
+          let temp = array[i + 1];
 
-            let temp = array[i + 1];
+          array[i + 1] = array[i];
+          array[i] = temp;
 
-            array[i + 1] = array[i];
-            array[i] = temp;
-
-            found = true;
-          }
+          found = true;
         }
-      } while(found)
+      }
+    } while(found)
 
-      return array;
-    }
-  );
+    return array;
+  }
 
   /**
    * factorial, the factorial of the array.
@@ -182,42 +177,20 @@ export default function arrayAlgorithms() {
    * @example factorial([122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213]);
    * @returns {number} returns the factorial number value of the array.
    */
-  const factorial = (
+  function factorial(array = []) {
 
-    function factorial(array = []) {
+    if (!(Array.isArray(array))) { return 0; }
 
-      if (!(Array.isArray(array))) { return 0; }
+    let factorial = 1;
+    let length = (array.length - 1);
 
-      let factorial = 1;
-      let length = (array.length - 1);
+    for(length; length >= 0; length--) {
 
-      for(length; length >= 0; length--) {
-
-        factorial = factorial * array[length];
-      }
-
-      return factorial;
+      factorial = factorial * array[length];
     }
-  );
 
-  /**
-   * factorial, the factorial of the array.
-   * @name test3
-   * @example test3();
-   */
-  function test3() {
-    return a
-  }
-
-  return {
-    fibonacci,
-    shuffleArray,
-    isSorted,
-    binarySearch,
-    bubbleSort,
-    factorial,
-    test3
-  };
+    return factorial;
+  } 
 }
 
 

@@ -6,16 +6,10 @@ import path from 'path'
 import config from './config'
 import processHtml from './resources/processHtml'
 
-export const app = express()
-
+const app = express()
 const baseUrl = config.basePath + config.versioning
 const dir = __dirname// /Users/superuser500/Desktop/Development/dev-code/base-node-es2017/dist/server
 
-app.disable('x-powered-by')
-app.use(cors())
-app.use(json())
-app.use(urlencoded({ extended: true }))
-app.use(morgan('dev'))
 app.use(express.static(dir + '/../public'))
 
 const htmlFilePath = path.join(dir + '/../public/index.html');

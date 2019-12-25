@@ -81,7 +81,6 @@ function addGlobalTextAreaEventHandler() {
         const textarea = section.getElementsByTagName('textarea');
         const preTag = section.getElementsByTagName('pre')[0];
         const fnc = textarea[0].value;
-        // const fnc = preTag.innerText + textarea[0].value;
 
         alert(eval(eval('fnc')));
       });

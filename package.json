@@ -5,6 +5,7 @@
   "author": "Hussein Qudsi <hussein8844@gmail.com>",
   "license": "MIT",
   "heroku-run-build-script": true,
+  "homepage": "/",
   "scripts": {
     "client": "documentation build src/public/script/**/*.js -f html -o src/public docs",
     "build": "babel src --copy-files --out-dir dist",

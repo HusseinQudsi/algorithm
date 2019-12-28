@@ -2,7 +2,8 @@ export default function numberAlgorithms() {
 
   return {
     isPrime,
-    greatestCommonDivisor
+    greatestCommonDivisor,
+    lowestCommonMultiplier
   };
 
   /**
@@ -33,7 +34,7 @@ export default function numberAlgorithms() {
   }
 
   /**
-   * greatestCommonDivisor array function.
+   * greatestCommonDivisor
    * @name greatestCommonDivisor
    * @param {number} numA
    * @param {number} numB
@@ -53,6 +54,37 @@ export default function numberAlgorithms() {
     let gCD = inputsMax % inputsMin;
 
     return greatestCommonDivisor(inputsMin, gCD);
+  }
+
+  /**
+   * lowestCommonMultiplier
+   * @name lowestCommonMultiplier
+   * @param {number} a
+   * @param {number} b
+   * @example lowestCommonMultiplier(4,6);
+   * @returns {number} return the lowest common multiplier.
+   */
+  function lowestCommonMultiplier(a, b) {
+
+    return ((a === 0) || (b === 0)) ?
+      0 :
+      Math.abs(a * b) / greatestCommonDivisor(a, b);
+
+    // From other section.
+    function greatestCommonDivisor(numA, numB) {
+
+      if (numA !== +numA || numB !== +numB) { return 0; }
+
+      if (!numB) {
+        return numA;
+      }
+
+      let inputsMax = Math.max(...arguments);
+      let inputsMin = Math.min(...arguments);
+      let gCD = inputsMax % inputsMin;
+
+      return greatestCommonDivisor(inputsMin, gCD);
+    }
   }
 
 }

@@ -68,4 +68,24 @@ describe('numberAlgorithm', () => {
 
     });
 
+    describe('lowestCommonMultiplier algorithm', () => {
+
+      it('lowestCommonMultiplier(104, 84): 2184', () => {
+
+        const result = numberAlgorithmFnc.lowestCommonMultiplier(104, 84);
+
+        expect(result).to.be.an('number');
+        expect(result).to.equal(2184);
+      });
+
+      it('lowestCommonMultiplier("bad", "input"): false', () => {
+
+        const result = numberAlgorithmFnc.lowestCommonMultiplier("bad", "input");
+
+        expect(result).to.be.an('number');
+        expect(result).to.equal(0);
+      });
+
+    });
+
 });

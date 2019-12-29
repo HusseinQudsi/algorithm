@@ -7,7 +7,6 @@ export default function numberAlgorithms() {
   };
 
   /**
-   * fibonacci array function.
    * @name isPrime
    * @param {number} num
    * @example isPrime(10);
@@ -34,7 +33,6 @@ export default function numberAlgorithms() {
   }
 
   /**
-   * greatestCommonDivisor
    * @name greatestCommonDivisor
    * @param {number} numA
    * @param {number} numB
@@ -57,18 +55,19 @@ export default function numberAlgorithms() {
   }
 
   /**
-   * lowestCommonMultiplier
    * @name lowestCommonMultiplier
    * @param {number} a
    * @param {number} b
-   * @example lowestCommonMultiplier(4,6);
+   * @example lowestCommonMultiplier(104,84);
    * @returns {number} return the lowest common multiplier.
    */
-  function lowestCommonMultiplier(a, b) {
+  function lowestCommonMultiplier(numA, numB) {
 
-    return ((a === 0) || (b === 0)) ?
+    if (numA !== +numA || numB !== +numB) { return 0; }
+
+    return ((numA === 0) || (numB === 0)) ?
       0 :
-      Math.abs(a * b) / greatestCommonDivisor(a, b);
+      Math.abs(numA * numB) / greatestCommonDivisor(numA, numB);
 
     // From other section.
     function greatestCommonDivisor(numA, numB) {

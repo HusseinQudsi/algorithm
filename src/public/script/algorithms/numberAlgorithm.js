@@ -3,7 +3,13 @@ export default function numberAlgorithms() {
   return {
     isPrime,
     greatestCommonDivisor,
-    lowestCommonMultiplier
+    lowestCommonMultiplier,
+    convertBinary,
+    convertDecimal,
+    binaryOr,
+    binaryAnd,
+    binaryShiftLeft,
+    binaryShiftRight
   };
 
   /**
@@ -84,6 +90,92 @@ export default function numberAlgorithms() {
 
       return greatestCommonDivisor(inputsMin, gCD);
     }
+  }
+
+  /**
+   * @name convertBinary
+   * Takeaways
+   * -bit, 1 digit.
+   * -byte, 8 bit
+   * -kilobyte, 1000 byte
+   * @param {number} num
+   * @example convertBinary(3);
+   * @returns {string}
+   */
+  function convertBinary(num) {
+
+    if (num !== +num) { return 0; }
+
+    return (num).toString(2);
+  }
+
+  /**
+   * @name convertDecimal
+   * @param {number} num
+   * @example convertDecimal(3);
+   * @returns {number}
+   */
+  function convertDecimal(num) {
+
+    if (num !== +num) { return 0; }
+
+    return parseInt(num , 2)
+  }
+
+  /**
+   * @name binaryShiftRight
+   * @param {number} num
+   * @param {number} by
+   * @example binaryShiftRight(10, 1);
+   * @returns {number}
+   */
+  function binaryShiftRight(num, by) {
+
+    if (num !== +num || by !== +by) { return 0; }
+
+    return num >> by;
+  }
+
+  /**
+   * @name binaryShiftLeft
+   * @param {number} num
+   * @param {number} by
+   * @example binaryShiftLeft(10, 1);
+   * @returns {number}
+   */
+  function binaryShiftLeft(num, by) {
+
+    if (num !== +num || by !== +by) { return 0; }
+
+    return num << by;
+  }
+
+  /**
+   * @name binaryAnd
+   * @param {number} num
+   * @param {number} by
+   * @example binaryAnd(10, 1);
+   * @returns {number}
+   */
+  function binaryAnd(num, by) {
+
+    if (num !== +num || by !== +by) { return 0; }
+
+    return num & by;
+  }
+
+  /**
+   * @name binaryOr
+   * @param {number} num
+   * @param {number} by
+   * @example binaryOr(10, 1);
+   * @returns {number}
+   */
+  function binaryOr(num, by) {
+
+    if (num !== +num || by !== +by) { return 0; }
+
+    return num | by;
   }
 
 }

@@ -8,8 +8,11 @@ export default function arrayAlgorithms() {
     shuffleArray,
     isSorted,
     binarySearch,
+    binarySearchRecursive,
     bubbleSort,
-    factorial
+    factorial,
+    pascalsTriangle,
+    chunkArray
   };
 
   /**
@@ -133,6 +136,27 @@ export default function arrayAlgorithms() {
   }
 
   /**
+   * binarySearchRecursive, searches a array through a binarySearch.
+   * @name binarySearchRecursive
+   * @param {array} array the array to be checked against target
+   * @param {number} target the target to be found
+   * @example binarySearchRecursive([1,2,3,4,5,6,7,8,9,10], 7);
+   * @returns {number} returns the target value
+   */
+  function binarySearchRecursive(array, target, original) {
+
+    if (!(array.length) || target !== +target) { return -1; }
+
+    let mid = Math.floor(array.length >> 1);
+
+    if (array[mid] === target) { return mid; }
+
+    return (array[mid] < target) ?
+      binarySearch(array.splice(mid), target, array) :
+      binarySearch(array.splice(0, mid), target, array);
+  }
+
+  /**
    * bubbleSort, sorting a array using bubble sorting.
    * #### Takeaways:
    * - prac makes perfection
@@ -190,7 +214,58 @@ export default function arrayAlgorithms() {
     }
 
     return factorial;
-  } 
+  }
+
+  /**
+   * @name pascalsTriangle
+   * @param {number} rows
+   * @example pascalsTriangle(6);
+   * @returns {number} return a array of pascalsTriangle.
+   */
+  function pascalsTriangle(rows) {
+
+    const pascalsTriangle = [
+      [1]
+    ];
+
+    do {
+
+      let nextIndex = pascalsTriangle.length - 1;
+      let nextArray = pascalsTriangle[nextIndex];
+      let length = nextArray.length;
+      let newArray = [];
+
+      for (length; length > -1; length--) {
+
+        newArray.push((nextArray[length - 1] || 0) + (nextArray[length] || 0));
+      }
+
+      pascalsTriangle.push(newArray);
+      rows--;
+    } while(rows)
+
+  }
+
+  /**
+   * @name chunkArray
+   * @param {array} array
+   * @param {number} by
+   * @example chunkArray([1,2,3,4,5,6,7,8,9], 4);
+   * @returns {number} return a array of arracy chunks.
+   */
+  function chunkArray(array, by) {
+
+      if ((!Array.isArray(array)) || by !== +by) { return []; }
+
+      const chunksArray = [];
+
+      while(array.length) {
+        chunksArray.push(array.splice(0,by));
+      }
+
+      return chunksArray;
+  }
+
 }
 
 

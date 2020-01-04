@@ -43,7 +43,7 @@ async function processFile(data, htmlFile) {
           border-radius: 0.25rem;
           transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
           -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12) !important;
-          box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12) !important;
+          box-shadow: 0 1px 1px 0 rgba(17, 132, 206, 0.2),0 3px 7px 0 rgba(17, 132, 206, 0.2) !important;
         }
 
         button {
@@ -55,7 +55,7 @@ async function processFile(data, htmlFile) {
           border-radius: 0.25rem;
           margin-left: 5px;
           font-size: 14px;
-          box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12) !important;
+          box-shadow: 0 1px 1px 0 rgba(17, 132, 206, 0.2),0 3px 7px 0 rgba(17, 132, 206, 0.2) !important;
         }
         button:hover {
           color: #1184ce;

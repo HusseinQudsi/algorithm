@@ -105,39 +105,37 @@ describe('arrayAlgorithms', () => {
       });
     });
 
-    // describe('binarySearchRecursive algorithm', () => {
-    //
-    //   const input = [1,2,3,4,5,6,7,8,9,10];
-    //   const target = 1;
-    //
-    //   it(`binarySearch: ${input} as input and ${target} as the target. Should return index 0`, () => {
-    //
-    //     const result = arrayAlgorithmFnc.binarySearchRecursive(input, target);
-    //
-    //     expect(result).to.equal(0);
-    //   });
-    //
-    //   const input2 = [1,2,3,4,5,6,7,8,9,10];
-    //   const target2 = 10;
-    //
-    //   it(`binarySearch: ${input2} as input and ${target2} as the target. Should return index 9`, () => {
-    //
-    //     const result = arrayAlgorithmFnc.binarySearchRecursive(input2, target2);
-    //
-    //     expect(result).to.equal(9);
-    //   });
-    //
-    //   it("binarySearch, bad input: missing parameters", () => {
-    //
-    //     const result1 = arrayAlgorithmFnc.binarySearchRecursive([]);
-    //
-    //     expect(result1).to.equal(-1);
-    //
-    //     const result2 = arrayAlgorithmFnc.binarySearchRecursive(undefined,0);
-    //
-    //     expect(result2).to.equal(-1);
-    //   });
-    // });
+    describe('binarySearchRecursive algorithm', () => {
+
+      it(`binarySearch: should equal to 1`, () => {
+
+        const input = [1,2,3,4,5,6,7,8,9,10];
+        const target = 1;
+        const result = arrayAlgorithmFnc.binarySearchRecursive(input, target);
+
+        expect(result).to.equal(1);
+      });
+
+      it(`binarySearch: should equal to 10`, () => {
+
+        const input = [1,2,3,4,5,6,7,8,9,10];
+        const target = 10;
+        const result = arrayAlgorithmFnc.binarySearchRecursive(input, target);
+
+        expect(result).to.equal(10);
+      });
+
+      it("binarySearch, bad input: should equal to -1", () => {
+
+        const result1 = arrayAlgorithmFnc.binarySearchRecursive([]);
+
+        expect(result1).to.equal(-1);
+
+        const result2 = arrayAlgorithmFnc.binarySearchRecursive(undefined,0);
+
+        expect(result2).to.equal(-1);
+      });
+    });
 
     describe('bubbleSort algorithm', () => {
 
@@ -178,7 +176,6 @@ describe('arrayAlgorithms', () => {
 
       it(`chunkArray: should return a array of chunks`, () => {
 
-        debugger;
         const result = arrayAlgorithmFnc.chunkArray([1,2,3,4,5,6,7,8,9], 4);
 
         expect(result).to.be.an('array');
@@ -191,12 +188,10 @@ describe('arrayAlgorithms', () => {
 
       it(`chunkArray: should return a empty array`, () => {
 
-        debugger;
         const result = arrayAlgorithmFnc.chunkArray("bad", []);
 
         expect(result).to.be.an('array').that.is.empty;
       });
     });
-
 
 });

@@ -141,19 +141,21 @@ export default function arrayAlgorithms() {
    * @param {array} array the array to be checked against target
    * @param {number} target the target to be found
    * @example binarySearchRecursive([1,2,3,4,5,6,7,8,9,10], 7);
-   * @returns {number} returns the target value
+   * @returns {number} returns data at index
    */
-  function binarySearchRecursive(array, target, original) {
+  function binarySearchRecursive(array, target) {
 
-    if (!(array.length) || target !== +target) { return -1; }
+    if (!(Array.isArray(array)) || !(array.length) || target !== +target) {
+      return -1;
+    }
 
     let mid = Math.floor(array.length >> 1);
 
-    if (array[mid] === target) { return mid; }
+    if (array[mid] === target) { return array[mid]; }
 
     return (array[mid] < target) ?
-      binarySearch(array.splice(mid), target, array) :
-      binarySearch(array.splice(0, mid), target, array);
+      binarySearchRecursive(array.splice(mid), target) :
+      binarySearchRecursive(array.splice(0, mid), target);
   }
 
   /**

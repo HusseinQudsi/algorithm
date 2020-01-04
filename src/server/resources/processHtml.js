@@ -51,14 +51,14 @@ async function processFile(data, htmlFile) {
           display: block;
           width: 20%;
           margin: 15px 0 0 0;
-          color: #495057;
+          color: #1184ce;
           border-radius: 0.25rem;
           margin-left: 5px;
           font-size: 14px;
           box-shadow: 0 1px 1px 0 rgba(17, 132, 206, 0.2),0 3px 7px 0 rgba(17, 132, 206, 0.2) !important;
         }
         button:hover {
-          color: #1184ce;
+          text-decoration: underline;
         }
       </style>
     `;

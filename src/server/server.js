@@ -4,31 +4,25 @@ import morgan from 'morgan'
 import cors from 'cors'
 import path from 'path'
 import config from './config'
+import processHtml from './resources/processHtml'
 
-export const app = express()
-
+const app = express()
 const baseUrl = config.basePath + config.versioning
-
-app.disable('x-powered-by')
-app.use(cors())
-app.use(json())
-app.use(urlencoded({ extended: true }))
-app.use(morgan('dev'))
-
 const dir = __dirname// /Users/superuser500/Desktop/Development/dev-code/base-node-es2017/dist/server
-app.use(express.static(dir + '/../public'))
+// TODO move to config
+const fileConfig = {
+    publicDir: '/../public',
+    index: '/../public/index.html'
+};
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(dir + '/../public/index.html'));
-})
+app.use(express.static(dir + fileConfig.publicDir))
 
-export const start = async () => {
+const htmlFilePath = path.join(dir + fileConfig.index);
 
-  try {
+processHtml(htmlFilePath);
 
-    return app.listen(config.port, () => (
-      config.log.logs && console.log(`REST API on http://localhost:${config.port}/api`))
-    )
-
-  } catch (e) { config.log.error && console.error(e) }
-}
+export const server = () => (
+  app.listen(config.port, () => (
+    config.log.logs && console.log(`REST API on http://localhost:${config.port}/`))
+  )
+)

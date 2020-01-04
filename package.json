@@ -1,12 +1,13 @@
 {
-  "name": "api-design-v3",
+  "name": "Javascript-ES6-Algorithms",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Hussein Qudsi <hussein8844@gmail.com>",
   "license": "MIT",
   "heroku-run-build-script": true,
+  "homepage": "/",
   "scripts": {
-    "client-docs": "documentation build src/public/**/*.js -f html -o src/documentation/client docs",
+    "client": "documentation build src/public/script/**/*.js -f html -o src/public docs",
     "build": "babel src --copy-files --out-dir dist",
     "test-client-brk": "npm run build && mocha dist/public/spec --recursive --exit --debug-brk",
     "test-client": "npm run build && mocha dist/public/spec --recursive --exit",
@@ -14,7 +15,7 @@
     "test-brk": "npm run build && mocha dist/server/spec --recursive --exit --debug-brk",
     "dev": "nodemon --exec npm run restart",
     "dev-brk": "rimraf dist && npm run build && nodemon --exec npm run start-brk",
-    "restart": "rimraf dist && npm run build && npm run start",
+    "restart": "rimraf dist && npm run client && npm run build && npm run start",
     "start": "node dist/index.js",
     "start-brk": "node --inspect-brk dist/index.js"
   },

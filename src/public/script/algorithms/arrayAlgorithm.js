@@ -274,39 +274,3 @@ export default function arrayAlgorithms() {
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// class LinkedListNode {
-//     constructor(data) {
-//         this.data = data;
-//         this.next = null;
-//     }
-// }
-
-
-// https://humanwhocodes.com/blog/2019/01/computer-science-in-javascript-linked-list/
-// debugger;
-// // create the first node
-// const head = new LinkedListNode(12);
-//
-// // add a second node
-// head.next = new LinkedListNode(99);
-//
-// // add a third node
-// head.next.next = new LinkedListNode(37);

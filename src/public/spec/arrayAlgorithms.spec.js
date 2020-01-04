@@ -5,6 +5,34 @@ const arrayAlgorithmFnc = arrayAlgorithm();
 
 describe('arrayAlgorithms', () => {
 
+    describe('pascalsTriangle algorithm', () => {
+
+      it('pascalsTriangle: should return pascals triangle of 7 indexes', () => {
+
+        const result = arrayAlgorithmFnc.pascalsTriangle(6);
+        const expectedOutPut = [[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1],[1,5,10,10,5,1],[1,6,15,20,15,6,1]];
+
+        expect(result).to.be.an('array');
+        expect(result).to.have.deep.members(expectedOutPut);
+      });
+
+      it('pascalsTriangle, bad input: Should return empty array.', () => {
+
+        const result = arrayAlgorithmFnc.pascalsTriangle("a");
+
+        expect(result).to.be.an('array');
+        expect(result).to.include.ordered.members([]);
+      });
+
+      it('pascalsTriangle, empty input: Should return empty array.', () => {
+
+        const result = arrayAlgorithmFnc.pascalsTriangle();
+
+        expect(result).to.be.an('array');
+        expect(result).to.include.ordered.members([]);
+      });
+    });
+
     describe('fibonaacci algorithm', () => {
 
       it('fibonaacci: Should match [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]', () => {

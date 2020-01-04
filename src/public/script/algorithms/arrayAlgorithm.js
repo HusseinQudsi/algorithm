@@ -249,6 +249,7 @@ export default function arrayAlgorithms() {
       rows--;
     } while(rows)
 
+    return pascalsTriangle;
   }
 
   /**

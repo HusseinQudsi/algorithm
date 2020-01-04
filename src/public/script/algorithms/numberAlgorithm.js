@@ -13,7 +13,9 @@ export default function numberAlgorithms() {
   };
 
   /**
-   * @name isPrime
+   * Takeaways
+   * - Loops
+   * - Math operational condtion
    * @param {number} num
    * @example isPrime(10);
    * @returns {boolean} return true/false.
@@ -39,7 +41,10 @@ export default function numberAlgorithms() {
   }
 
   /**
-   * @name greatestCommonDivisor
+   * Takeaways
+   * - Arguments
+   * - Logic, mathematical opeational
+   * - Recursive
    * @param {number} numA
    * @param {number} numB
    * @example greatestCommonDivisor(84,104);
@@ -61,9 +66,11 @@ export default function numberAlgorithms() {
   }
 
   /**
-   * @name lowestCommonMultiplier
-   * @param {number} a
-   * @param {number} b
+   * Takeaways
+   * - Has depenancy on greatestCommonDivisor
+   * - Logic, mathematical opeational
+   * @param {number} numA
+   * @param {number} numB
    * @example lowestCommonMultiplier(104,84);
    * @returns {number} return the lowest common multiplier.
    */
@@ -94,7 +101,6 @@ export default function numberAlgorithms() {
 
   // TODO: add Unit Test:
   // /**
-  //  * @name convertBinary
   //  * Takeaways
   //  * -bit, 1 digit.
   //  * -byte, 8 bit
@@ -111,7 +117,6 @@ export default function numberAlgorithms() {
   // }
   //
   // /**
-  //  * @name convertDecimal
   //  * @param {number} num
   //  * @example convertDecimal(3);
   //  * @returns {number}
@@ -124,7 +129,6 @@ export default function numberAlgorithms() {
   // }
   //
   // /**
-  //  * @name binaryShiftRight
   //  * @param {number} num
   //  * @param {number} by
   //  * @example binaryShiftRight(10, 1);
@@ -138,7 +142,6 @@ export default function numberAlgorithms() {
   // }
   //
   // /**
-  //  * @name binaryShiftLeft
   //  * @param {number} num
   //  * @param {number} by
   //  * @example binaryShiftLeft(10, 1);
@@ -152,7 +155,6 @@ export default function numberAlgorithms() {
   // }
   //
   // /**
-  //  * @name binaryAnd
   //  * @param {number} num
   //  * @param {number} by
   //  * @example binaryAnd(10, 1);
@@ -166,7 +168,6 @@ export default function numberAlgorithms() {
   // }
   //
   // /**
-  //  * @name binaryOr
   //  * @param {number} num
   //  * @param {number} by
   //  * @example binaryOr(10, 1);

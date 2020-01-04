@@ -1,3 +1,5 @@
+// https://www.youtube.com/watch?v=0cB4D65vsIQ&list=PL6cactdCCnTK7Su3WF--4jZdd5K-vk_78
+// https://github.com/trekhleb/javascript-algorithms#data-structures
 #  course Title: API Design in Node.js (using Express & Mongo)
 ## Github [repo](https://github.com/FrontendMasters/api-design-node-v3)
 ## link: [API Design in Node.js, v1](https://frontendmasters.com/courses/api-design-nodejs/)

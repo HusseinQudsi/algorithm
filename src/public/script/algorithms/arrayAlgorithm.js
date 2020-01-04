@@ -1,6 +1,3 @@
-// https://www.youtube.com/watch?v=0cB4D65vsIQ&list=PL6cactdCCnTK7Su3WF--4jZdd5K-vk_78
-// https://github.com/trekhleb/javascript-algorithms#data-structures
-
 export default function arrayAlgorithms() {
 
   return {
@@ -16,8 +13,9 @@ export default function arrayAlgorithms() {
   };
 
   /**
-   * fibonacci array function.
-   * @name fibonacci
+   * #### Takeaways:
+   * - Initiating array
+   * - Looping and populating fibonacci numbers
    * @param {number} length will return a array of fibonacci sequence at  that length
    * @example fibonacci(10);
    * @returns {array} return the array of fibonacci sequence
@@ -41,11 +39,10 @@ export default function arrayAlgorithms() {
   }
 
   /**
-   * Shuffling a array's positions.
    * #### Takeaways:
    * - Reverse loops
+   * - Randomly selecting array indexes
    * - Moving a array indexes around, within the array
-   * @name shuffleArray
    * @param {array} array the array to be shuffled
    * @example shuffleArray([1, 2, 144, 200]);
    * @returns {array} return the shuffled array [1, 2, 200, 144]
@@ -71,10 +68,9 @@ export default function arrayAlgorithms() {
   }
 
   /**
-   * isSorted, if a array is sorted
    * #### Takeaways:
-   * - Reverse Array
-   * @name isSorted
+   * - Reverse loops
+   * - Checking conditionally
    * @param {array} array the array to be checked if sorted
    * @example isSorted([1, 2, 144, 200]);
    * @returns {array} return boolean
@@ -97,10 +93,10 @@ export default function arrayAlgorithms() {
   }
 
   /**
-   * binarySearch, searches a array through a binarySearch.
    * #### Takeaways:
    * - Logic, manipulating the while loop conditionally
-   * @name binarySearch
+   * - Logic, finding the center of the array
+   * - Logic, checking the left or right half of the array.
    * @param {array} array the array to be checked against target
    * @param {number} target the target to be found
    * @example binarySearch([1,2,3,4,5,6,7,8,9,10], 7);
@@ -136,8 +132,9 @@ export default function arrayAlgorithms() {
   }
 
   /**
-   * binarySearchRecursive, searches a array through a binarySearch.
-   * @name binarySearchRecursive
+   * #### Takeaways:
+   * - Logic, finding the center of the array
+   * - Logic, checking the left or right half of the array.
    * @param {array} array the array to be checked against target
    * @param {number} target the target to be found
    * @example binarySearchRecursive([1,2,3,4,5,6,7,8,9,10], 7);
@@ -159,10 +156,11 @@ export default function arrayAlgorithms() {
   }
 
   /**
-   * bubbleSort, sorting a array using bubble sorting.
    * #### Takeaways:
-   * - prac makes perfection
-   * @name bubbleSort
+   * - Variable scopes
+   * - Loops within loops
+   * - Swapping array indexes
+   * - Conditionally iterations
    * @param {array} array the array to be checked against target
    * @example bubbleSort([122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213]);
    * @returns {number} returns the sorted array
@@ -197,8 +195,9 @@ export default function arrayAlgorithms() {
   }
 
   /**
-   * factorial, the factorial of the array.
-   * @name factorial
+   * #### Takeaways:
+   * - Looping
+   * - Math operations
    * @param {array} array the array to be caculated
    * @example factorial([122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213]);
    * @returns {number} returns the factorial number value of the array.
@@ -219,7 +218,11 @@ export default function arrayAlgorithms() {
   }
 
   /**
-   * @name pascalsTriangle
+   * #### Takeaways:
+   * - Initiating array
+   * - Loops within loops
+   * - Logic, building array indexes
+   * - Logic, conditionally iterations
    * @param {number} rows
    * @example pascalsTriangle(6);
    * @returns {number} return a array of pascalsTriangle.
@@ -249,11 +252,13 @@ export default function arrayAlgorithms() {
   }
 
   /**
-   * @name chunkArray
+   * #### Takeaways:
+   * - Initiating array
+   * - Logic, building array indexes.
    * @param {array} array
    * @param {number} by
    * @example chunkArray([1,2,3,4,5,6,7,8,9], 4);
-   * @returns {number} return a array of arracy chunks.
+   * @returns {number} return a array of array chunks.
    */
   function chunkArray(array, by) {
 

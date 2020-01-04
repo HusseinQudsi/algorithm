@@ -1,6 +1,6 @@
 const processVars = process.env
 const env = processVars.NODE_ENV || 'development'
-const port = processVars.PORT
+const port = processVars.PORT || 3000
 
 let envConfig = {}
 

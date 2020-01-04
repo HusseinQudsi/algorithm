@@ -9,7 +9,8 @@ export default function arrayAlgorithms() {
     bubbleSort,
     factorial,
     pascalsTriangle,
-    chunkArray
+    chunkArray,
+    addNewMethodHere
   };
 
   /**
@@ -276,6 +277,17 @@ export default function arrayAlgorithms() {
       }
 
       return chunksArray;
+  }
+
+  /**
+   * #### Takeaways:
+   * - You can add your method to arrayAlgorithms here.
+   * @param {string} str
+   * @example string("hello world");
+   * @returns {array} return string.
+   */
+  function addNewMethodHere(str = "") {
+    return str;
   }
 
 }

@@ -7,7 +7,7 @@ describe('arrayAlgorithms', () => {
 
     describe('fibonaacci algorithm', () => {
 
-      it('fibonaacci: 12 as input.', () => {
+      it('fibonaacci: Should match [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]', () => {
 
         const result = arrayAlgorithmFnc.fibonacci(12);
         const expectedOutPut = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144];
@@ -16,9 +16,17 @@ describe('arrayAlgorithms', () => {
         expect(result).to.include.ordered.members(expectedOutPut);
       });
 
-      it('fibonaacci, bad input: "a" as input.', () => {
+      it('fibonaacci, bad input: Should return empty array.', () => {
 
         const result = arrayAlgorithmFnc.fibonacci("a");
+
+        expect(result).to.be.an('array');
+        expect(result).to.include.ordered.members([]);
+      });
+
+      it('fibonaacci, empty input: Should return empty array.', () => {
+
+        const result = arrayAlgorithmFnc.fibonacci();
 
         expect(result).to.be.an('array');
         expect(result).to.include.ordered.members([]);
@@ -27,7 +35,7 @@ describe('arrayAlgorithms', () => {
 
     describe('shuffle algorithm', () => {
 
-      it('shuffle: [5,2,1,3] as input.', () => {
+      it('shuffle: Should return shuffled array with these values [5,2,1,3].', () => {
 
         const input = [5,2,1,3];
         const result = arrayAlgorithmFnc.shuffleArray(input.concat([]));
@@ -36,17 +44,22 @@ describe('arrayAlgorithms', () => {
         expect(result).to.include.not.ordered.members(input);
       });
 
-      it('shuffle, bad input: "a" as input.', () => {
+      it('shuffle, bad input: should return empty array.', () => {
 
         const result = arrayAlgorithmFnc.shuffleArray("a");
         expect(result).to.be.an('array').that.is.empty;
       });
 
+      it('shuffle, empty input: should return empty array.', () => {
+
+        const result = arrayAlgorithmFnc.shuffleArray();
+        expect(result).to.be.an('array').that.is.empty;
+      });
     });
 
     describe('isSorted algorithm', () => {
 
-      it('isSorted: [6,3,4,5] as input, should return false', () => {
+      it('isSorted: should return false.', () => {
 
         const input = [6,3,4,5];
         const result = arrayAlgorithmFnc.isSorted(input.concat([]));
@@ -54,7 +67,7 @@ describe('arrayAlgorithms', () => {
         expect(result).to.be.false;
       });
 
-      it('isSorted: [0,3,4,8] as input, should return true', () => {
+      it('isSorted: should return true.', () => {
 
         const input = [0,3,4,8];
         const result = arrayAlgorithmFnc.isSorted(input.concat([]));
@@ -62,38 +75,43 @@ describe('arrayAlgorithms', () => {
         expect(result).to.be.true;
       });
 
-      it('isSorted: [0,3,4,8] as input, should return true', () => {
+      it('isSorted, bad input: should return false.', () => {
 
         const result = arrayAlgorithmFnc.isSorted("a");
 
         expect(result).to.be.false;
       });
 
+      it('isSorted, empty input: should return false.', () => {
+
+        const result = arrayAlgorithmFnc.isSorted("a");
+
+        expect(result).to.be.false;
+      });
     });
 
     describe('binarySearch algorithm', () => {
 
-      const input = [1,2,3,4,5,6,7,8,9,10];
-      const target = 1;
+      it("binarySearch: Should return index 0.", () => {
 
-      it(`binarySearch: ${input} as input and ${target} as the target. Should return index 0`, () => {
+        const input = [1,2,3,4,5,6,7,8,9,10];
+        const target = 1;
 
         const result = arrayAlgorithmFnc.binarySearch(input, target);
 
         expect(result).to.equal(0);
       });
 
-      const input2 = [1,2,3,4,5,6,7,8,9,10];
-      const target2 = 10;
+      it("binarySearch: Should return index 9.", () => {
 
-      it(`binarySearch: ${input2} as input and ${target2} as the target. Should return index 9`, () => {
-
-        const result = arrayAlgorithmFnc.binarySearch(input2, target2);
+        const input = [1,2,3,4,5,6,7,8,9,10];
+        const target = 10;
+        const result = arrayAlgorithmFnc.binarySearch(input, target);
 
         expect(result).to.equal(9);
       });
 
-      it("binarySearch, bad input: missing parameters", () => {
+      it("binarySearch, bad input: should return -1.", () => {
 
         const result1 = arrayAlgorithmFnc.binarySearch([]);
 
@@ -103,11 +121,18 @@ describe('arrayAlgorithms', () => {
 
         expect(result2).to.equal(-1);
       });
+
+      it("binarySearch, empty input: should return -1.", () => {
+
+        const result1 = arrayAlgorithmFnc.binarySearch();
+
+        expect(result1).to.equal(-1);
+      });
     });
 
     describe('binarySearchRecursive algorithm', () => {
 
-      it(`binarySearch: should equal to 1`, () => {
+      it(`binarySearchRecursive: should equal to 1`, () => {
 
         const input = [1,2,3,4,5,6,7,8,9,10];
         const target = 1;
@@ -116,7 +141,7 @@ describe('arrayAlgorithms', () => {
         expect(result).to.equal(1);
       });
 
-      it(`binarySearch: should equal to 10`, () => {
+      it(`binarySearchRecursive: should equal to 10`, () => {
 
         const input = [1,2,3,4,5,6,7,8,9,10];
         const target = 10;
@@ -125,7 +150,7 @@ describe('arrayAlgorithms', () => {
         expect(result).to.equal(10);
       });
 
-      it("binarySearch, bad input: should equal to -1", () => {
+      it("binarySearchRecursive, bad input: should equal to -1", () => {
 
         const result1 = arrayAlgorithmFnc.binarySearchRecursive([]);
 
@@ -135,37 +160,56 @@ describe('arrayAlgorithms', () => {
 
         expect(result2).to.equal(-1);
       });
+
+      it("binarySearchRecursive, empty input: should return -1.", () => {
+
+        const result1 = arrayAlgorithmFnc.binarySearchRecursive();
+
+        expect(result1).to.equal(-1);
+      });
     });
 
     describe('bubbleSort algorithm', () => {
 
-      const input = [122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213];
+      it(`bubbleSort: should return array with values in this order [1,9,23,64,84,98,122,213,234,455,3223].`, () => {
 
-      it(`bubbleSort: ${input} as input.`, () => {
-
+        const input = [122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213];
         const result = arrayAlgorithmFnc.bubbleSort(input);
 
         expect(result).to.include.ordered.members([1,9,23,64,84,98,122,213,234,455,3223]);
       });
 
-      it('bubbleSort, bad input: "a" as input.', () => {
+      it('bubbleSort, bad input: should return empty array', () => {
 
         const result = arrayAlgorithmFnc.bubbleSort("a");
 
         expect(result).to.be.an('array');
         expect(result).to.include.ordered.members([]);
       });
+
+      it('bubbleSort, empty input: should return empty array', () => {
+
+        const result = arrayAlgorithmFnc.bubbleSort("a");
+
+        expect(result).to.be.an('array').that.is.empty;
+      });
     });
 
     describe('factorial algorithm', () => {
 
-      it(`factorial: should return factorial value`, () => {
+      it(`factorial: should return factorial value 24`, () => {
 
         const result = arrayAlgorithmFnc.factorial([2,3,4]);
         expect(result).to.equal(24);
       });
 
-      it(`factorial: should return factorial value`, () => {
+      it(`factorial, bad input: should return 0`, () => {
+
+        const result = arrayAlgorithmFnc.factorial("bad");
+        expect(result).to.equal(0);
+      });
+
+      it(`factorial, empty input: should return 0`, () => {
 
         const result = arrayAlgorithmFnc.factorial("bad");
         expect(result).to.equal(0);
@@ -186,9 +230,16 @@ describe('arrayAlgorithms', () => {
         ]);
       });
 
-      it(`chunkArray: should return a empty array`, () => {
+      it(`chunkArray, bad input: should return a empty array`, () => {
 
         const result = arrayAlgorithmFnc.chunkArray("bad", []);
+
+        expect(result).to.be.an('array').that.is.empty;
+      });
+
+      it(`chunkArray, empty input: should return a empty array`, () => {
+
+        const result = arrayAlgorithmFnc.chunkArray(undefined, []);
 
         expect(result).to.be.an('array').that.is.empty;
       });

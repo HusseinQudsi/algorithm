@@ -13,7 +13,7 @@ function enrichTextArea() {
     const preTags = document.getElementsByTagName('pre');
     const textareaTemplate = (`
       <textarea name="name" rows="8" cols="80"></textarea>
-      <button type="button" name="button">click</button>
+      <button type="button" name="button">Execute</button>
     `);
 
     [].forEach.call(preTags, (el) => {

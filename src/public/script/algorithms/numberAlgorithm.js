@@ -50,7 +50,7 @@ export default function numberAlgorithms() {
    * @example greatestCommonDivisor(84,104);
    * @returns {number} return the greatest common divisor.
    */
-  function greatestCommonDivisor(numA, numB) {
+  function greatestCommonDivisor(numA = 0, numB = 0) {
 
     if (numA !== +numA || numB !== +numB) { return 0; }
 
@@ -74,7 +74,7 @@ export default function numberAlgorithms() {
    * @example lowestCommonMultiplier(104,84);
    * @returns {number} return the lowest common multiplier.
    */
-  function lowestCommonMultiplier(numA, numB) {
+  function lowestCommonMultiplier(numA = 0, numB = 0) {
 
     if (numA !== +numA || numB !== +numB) { return 0; }
 
@@ -83,7 +83,7 @@ export default function numberAlgorithms() {
       Math.abs(numA * numB) / greatestCommonDivisor(numA, numB);
 
     // From other section.
-    function greatestCommonDivisor(numA, numB) {
+    function greatestCommonDivisor(numA = 0, numB = 0) {
 
       if (numA !== +numA || numB !== +numB) { return 0; }
 

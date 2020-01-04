@@ -140,7 +140,7 @@ export default function arrayAlgorithms() {
    * @example binarySearchRecursive([1,2,3,4,5,6,7,8,9,10], 7);
    * @returns {number} returns data at index
    */
-  function binarySearchRecursive(array, target) {
+  function binarySearchRecursive(array = [], target = 0) {
 
     if (!(Array.isArray(array)) || !(array.length) || target !== +target) {
       return -1;
@@ -227,11 +227,15 @@ export default function arrayAlgorithms() {
    * @example pascalsTriangle(6);
    * @returns {number} return a array of pascalsTriangle.
    */
-  function pascalsTriangle(rows) {
+  function pascalsTriangle(rows = 0) {
+
+    if (rows !== +rows) { return []; }
 
     const pascalsTriangle = [
       [1]
     ];
+
+    if (rows === 0) { return pascalsTriangle; }
 
     do {
 
@@ -261,7 +265,7 @@ export default function arrayAlgorithms() {
    * @example chunkArray([1,2,3,4,5,6,7,8,9], 4);
    * @returns {number} return a array of array chunks.
    */
-  function chunkArray(array, by) {
+  function chunkArray(array = [], by = 0) {
 
       if ((!Array.isArray(array)) || by !== +by) { return []; }
 

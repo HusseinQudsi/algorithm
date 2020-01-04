@@ -18,6 +18,7 @@ describe('arrayAlgorithms', () => {
 
       it('pascalsTriangle, bad input: Should return empty array.', () => {
 
+        debugger;
         const result = arrayAlgorithmFnc.pascalsTriangle("a");
 
         expect(result).to.be.an('array');

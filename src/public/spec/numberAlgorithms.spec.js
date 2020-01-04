@@ -1,13 +1,13 @@
-import numberAlgorithm from '../script/algorithms/numberAlgorithm.js';
+import numberAlgorithms from '../script/algorithms/numberAlgorithm.js';
 
 const expect = require('chai').expect;
-const numberAlgorithmFnc = numberAlgorithm();
+const numberAlgorithmFnc = numberAlgorithms();
 
-describe('numberAlgorithm', () => {
+describe('numberAlgorithms', () => {
 
     describe('isPrime algorithm', () => {
 
-      it('isPrime(10): false', () => {
+      it('isPrime(10): should return false', () => {
 
         const result = numberAlgorithmFnc.isPrime(10);
 
@@ -15,7 +15,7 @@ describe('numberAlgorithm', () => {
         expect(result).to.be.false;
       });
 
-      it('isPrime(7): true', () => {
+      it('isPrime(7): should return true', () => {
 
         const result = numberAlgorithmFnc.isPrime(7);
 
@@ -23,7 +23,7 @@ describe('numberAlgorithm', () => {
         expect(result).to.be.true;
       });
 
-      it('isPrime(-100): false', () => {
+      it('isPrime(-100): should return false', () => {
 
         const result = numberAlgorithmFnc.isPrime(-100);
 
@@ -31,7 +31,7 @@ describe('numberAlgorithm', () => {
         expect(result).to.be.false;
       });
 
-      it('isPrime("hi"): false', () => {
+      it('isPrime("hi"): should return false', () => {
 
         const result = numberAlgorithmFnc.isPrime("hi");
 
@@ -42,7 +42,7 @@ describe('numberAlgorithm', () => {
 
     describe('greatestCommonDivisor algorithm', () => {
 
-      it('greatestCommonDivisor(104, 84): false', () => {
+      it('greatestCommonDivisor(104, 84): should return 4', () => {
 
         const result = numberAlgorithmFnc.greatestCommonDivisor(104, 84);
 
@@ -50,27 +50,18 @@ describe('numberAlgorithm', () => {
         expect(result).to.equal(4);
       });
 
-      it('greatestCommonDivisor(84, 104): false', () => {
-
-        const result = numberAlgorithmFnc.greatestCommonDivisor(84, 104);
-
-        expect(result).to.be.an('number');
-        expect(result).to.equal(4);
-      });
-
-      it('greatestCommonDivisor("bad", "input"): false', () => {
+      it('greatestCommonDivisor("bad", "input"), bad input: should return 0', () => {
 
         const result = numberAlgorithmFnc.greatestCommonDivisor("bad", "input");
 
         expect(result).to.be.an('number');
         expect(result).to.equal(0);
       });
-
     });
 
     describe('lowestCommonMultiplier algorithm', () => {
 
-      it('lowestCommonMultiplier(104, 84): 2184', () => {
+      it('lowestCommonMultiplier(104, 84): should return 2184', () => {
 
         const result = numberAlgorithmFnc.lowestCommonMultiplier(104, 84);
 
@@ -78,14 +69,13 @@ describe('numberAlgorithm', () => {
         expect(result).to.equal(2184);
       });
 
-      it('lowestCommonMultiplier("bad", "input"): false', () => {
+      it('lowestCommonMultiplier("bad", "input"): should return 0', () => {
 
         const result = numberAlgorithmFnc.lowestCommonMultiplier("bad", "input");
 
         expect(result).to.be.an('number');
         expect(result).to.equal(0);
       });
-
     });
 
 });

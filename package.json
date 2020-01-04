@@ -8,7 +8,7 @@
   "homepage": "/",
   "scripts": {
     "client": "documentation build src/public/script/**/*.js -f html -o src/public docs",
-    "build": "npm run client && babel src --copy-files --out-dir dist",
+    "build": "babel src --copy-files --out-dir dist && npm run client",
     "test-client-brk": "npm run build && mocha dist/public/spec --recursive --exit --debug-brk",
     "test-client": "npm run build && mocha dist/public/spec --recursive --exit",
     "test": "npm run build && mocha dist/server/spec --recursive --exit",

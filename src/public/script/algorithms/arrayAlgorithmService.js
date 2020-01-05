@@ -1,16 +1,15 @@
 export default function arrayAlgorithms() {
 
   return {
-    fibonacci,
-    shuffleArray,
-    isSorted,
-    binarySearch,
-    binarySearchRecursive,
-    bubbleSort,
-    factorial,
-    pascalsTriangle,
-    chunkArray,
-    addNewMethodHere
+    arrayFibonacci,
+    arrayShuffle,
+    arrayIsSorted,
+    arrayBinarySearch,
+    arrayBinarySearchRecursive,
+    arrayBubbleSort,
+    arrayFactorial,
+    arrayPascalsTriangle,
+    arrayChunk
   };
 
   /**
@@ -18,10 +17,10 @@ export default function arrayAlgorithms() {
    * - Initiating array
    * - Looping and populating fibonacci numbers
    * @param {number} length will return a array of fibonacci sequence at  that length
-   * @example fibonacci(10);
+   * @example arrayFibonacci(10);
    * @returns {array} return the array of fibonacci sequence
    */
-  function fibonacci(length = 0) {
+  function arrayFibonacci(length = 0) {
 
     if (+length !== length) { return []; }
 
@@ -45,10 +44,10 @@ export default function arrayAlgorithms() {
    * - Randomly selecting array indexes
    * - Moving a array indexes around, within the array
    * @param {array} array the array to be shuffled
-   * @example shuffleArray([1, 2, 144, 200]);
+   * @example arrayShuffle([1, 2, 144, 200]);
    * @returns {array} return the shuffled array [1, 2, 200, 144]
    */
-  function shuffleArray(array = []) {
+  function arrayShuffle(array = []) {
 
     if (!(Array.isArray(array))) { return []; }
 
@@ -73,10 +72,10 @@ export default function arrayAlgorithms() {
    * - Reverse loops
    * - Checking conditionally
    * @param {array} array the array to be checked if sorted
-   * @example isSorted([1, 2, 144, 200]);
+   * @example arrayIsSorted([1, 2, 144, 200]);
    * @returns {array} return boolean
    */
-  function isSorted(array = []) {
+  function arrayIsSorted(array = []) {
 
     if (!(Array.isArray(array))) { return false; }
 
@@ -100,10 +99,10 @@ export default function arrayAlgorithms() {
    * - Logic, checking the left or right half of the array.
    * @param {array} array the array to be checked against target
    * @param {number} target the target to be found
-   * @example binarySearch([1,2,3,4,5,6,7,8,9,10], 7);
+   * @example arrayBinarySearch([1,2,3,4,5,6,7,8,9,10], 7);
    * @returns {number} returns the index of input
    */
-  function binarySearch(array = [], target = 0) {
+  function arrayBinarySearch(array = [], target = 0) {
 
     if (!(Array.isArray(array))) { return -1; }
     if (+target !== target) { return -1; }
@@ -138,10 +137,10 @@ export default function arrayAlgorithms() {
    * - Logic, checking the left or right half of the array.
    * @param {array} array the array to be checked against target
    * @param {number} target the target to be found
-   * @example binarySearchRecursive([1,2,3,4,5,6,7,8,9,10], 7);
+   * @example arrayBinarySearchRecursive([1,2,3,4,5,6,7,8,9,10], 7);
    * @returns {number} returns data at index
    */
-  function binarySearchRecursive(array = [], target = 0) {
+  function arrayBinarySearchRecursive(array = [], target = 0) {
 
     if (!(Array.isArray(array)) || !(array.length) || target !== +target) {
       return -1;
@@ -152,8 +151,8 @@ export default function arrayAlgorithms() {
     if (array[mid] === target) { return array[mid]; }
 
     return (array[mid] < target) ?
-      binarySearchRecursive(array.splice(mid), target) :
-      binarySearchRecursive(array.splice(0, mid), target);
+      arrayBinarySearchRecursive(array.splice(mid), target) :
+      arrayBinarySearchRecursive(array.splice(0, mid), target);
   }
 
   /**
@@ -163,10 +162,10 @@ export default function arrayAlgorithms() {
    * - Swapping array indexes
    * - Conditionally iterations
    * @param {array} array the array to be checked against target
-   * @example bubbleSort([122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213]);
+   * @example arrayBubbleSort([122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213]);
    * @returns {number} returns the sorted array
    */
-  function bubbleSort(array = []) {
+  function arrayBubbleSort(array = []) {
 
     if (!(Array.isArray(array))) { return []; }
 
@@ -200,10 +199,10 @@ export default function arrayAlgorithms() {
    * - Looping
    * - Math operations
    * @param {array} array the array to be caculated
-   * @example factorial([122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213]);
+   * @example arrayFactorial([122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213]);
    * @returns {number} returns the factorial number value of the array.
    */
-  function factorial(array = []) {
+  function arrayFactorial(array = []) {
 
     if (!(Array.isArray(array))) { return 0; }
 
@@ -225,10 +224,10 @@ export default function arrayAlgorithms() {
    * - Logic, building array indexes
    * - Logic, conditionally iterations
    * @param {number} rows
-   * @example pascalsTriangle(6);
+   * @example arrayPascalsTriangle(6);
    * @returns {number} return a array of pascalsTriangle.
    */
-  function pascalsTriangle(rows = 0) {
+  function arrayPascalsTriangle(rows = 0) {
 
     if (rows !== +rows) { return []; }
 
@@ -263,10 +262,10 @@ export default function arrayAlgorithms() {
    * - Logic, building array indexes.
    * @param {array} array
    * @param {number} by
-   * @example chunkArray([1,2,3,4,5,6,7,8,9], 4);
+   * @example arrayChunk([1,2,3,4,5,6,7,8,9], 4);
    * @returns {number} return a array of array chunks.
    */
-  function chunkArray(array = [], by = 0) {
+  function arrayChunk(array = [], by = 0) {
 
       if ((!Array.isArray(array)) || by !== +by) { return []; }
 
@@ -277,17 +276,6 @@ export default function arrayAlgorithms() {
       }
 
       return chunksArray;
-  }
-
-  /**
-   * #### Takeaways:
-   * - You can add your method to arrayAlgorithms here.
-   * @param {string} str
-   * @example string("hello world");
-   * @returns {array} return string.
-   */
-  function addNewMethodHere(str = "") {
-    return str;
   }
 
 }

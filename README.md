@@ -8,7 +8,7 @@ npm install
 
 ## Contributing
 
-To contribute, work on the source files. Then build and run the tests against the built files. Be careful to not introduce syntax that will be transpiled down to unsupported syntax. For example, `for...of` loops will be transpiled to use `Symbol.iterator` which is unavailable in IE.
+To contribute, work on the source files by adding new Algorithms to existing service or create a new one.
 
 ### Build scripts
 
@@ -39,4 +39,4 @@ Unit Test debugging
 
 ## License
 
-MIT © Joyent, Inc. and other Node contributors
+MIT

@@ -1,4 +1,4 @@
-import numberAlgorithms from '../script/algorithms/numberAlgorithm.js';
+import numberAlgorithms from '../script/algorithms/numberAlgorithmService.js';
 
 const expect = require('chai').expect;
 const numberAlgorithmFnc = numberAlgorithms();

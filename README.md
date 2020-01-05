@@ -17,6 +17,10 @@ To contribute, work on the source files by adding new Algorithms to existing ser
 
 ##### `npm run build`
 
+ES6 compiling
+
+##### `npm run client`
+
 Builds the client web page
 
 ##### `npm run start`

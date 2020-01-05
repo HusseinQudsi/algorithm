@@ -148,11 +148,17 @@ export default function arrayAlgorithms() {
 
     let mid = Math.floor(array.length >> 1);
 
-    if (array[mid] === target) { return array[mid]; }
+    if (array[mid] === target) {
+      
+      return array[mid];
+    }
 
-    return (array[mid] < target) ?
-      arrayBinarySearchRecursive(array.splice(mid), target) :
-      arrayBinarySearchRecursive(array.splice(0, mid), target);
+    if (array[mid] < target) {
+
+      return arrayBinarySearchRecursive(array.splice(mid), target);
+    }
+
+    return arrayBinarySearchRecursive(array.splice(0, mid), target);
   }
 
   /**

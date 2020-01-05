@@ -1,9 +1,9 @@
 export default function numberAlgorithms() {
 
   return {
-    isPrime,
-    greatestCommonDivisor,
-    lowestCommonMultiplier,
+    numberIsPrime,
+    numberGreatestCommonDivisor,
+    numberLowestCommonMultiplier,
     // convertBinary,
     // convertDecimal,
     // binaryOr,
@@ -17,10 +17,10 @@ export default function numberAlgorithms() {
    * - Loops
    * - Math operational condtion
    * @param {number} num
-   * @example isPrime(10);
+   * @example numberIsPrime(10);
    * @returns {boolean} return true/false.
    */
-  function isPrime(number = 0) {
+  function numberIsPrime(number = 0) {
 
     if (number !== +number) { return false; }
     if (number < 2) { return false; }
@@ -47,10 +47,10 @@ export default function numberAlgorithms() {
    * - Recursive
    * @param {number} numA
    * @param {number} numB
-   * @example greatestCommonDivisor(84,104);
+   * @example numberGreatestCommonDivisor(84,104);
    * @returns {number} return the greatest common divisor.
    */
-  function greatestCommonDivisor(numA = 0, numB = 0) {
+  function numberGreatestCommonDivisor(numA = 0, numB = 0) {
 
     if (numA !== +numA || numB !== +numB) { return 0; }
 
@@ -62,7 +62,7 @@ export default function numberAlgorithms() {
     let inputsMin = Math.min(...arguments);
     let gCD = inputsMax % inputsMin;
 
-    return greatestCommonDivisor(inputsMin, gCD);
+    return numberGreatestCommonDivisor(inputsMin, gCD);
   }
 
   /**
@@ -71,10 +71,10 @@ export default function numberAlgorithms() {
    * - Logic, mathematical opeational
    * @param {number} numA
    * @param {number} numB
-   * @example lowestCommonMultiplier(104,84);
+   * @example numberLowestCommonMultiplier(104,84);
    * @returns {number} return the lowest common multiplier.
    */
-  function lowestCommonMultiplier(numA = 0, numB = 0) {
+  function numberLowestCommonMultiplier(numA = 0, numB = 0) {
 
     if (numA !== +numA || numB !== +numB) { return 0; }
 

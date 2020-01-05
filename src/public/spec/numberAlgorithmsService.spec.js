@@ -9,7 +9,7 @@ describe('numberAlgorithms', () => {
 
       it('isPrime(10): should return false', () => {
 
-        const result = numberAlgorithmFnc.isPrime(10);
+        const result = numberAlgorithmFnc.numberIsPrime(10);
 
         expect(result).to.be.an('boolean');
         expect(result).to.be.false;
@@ -17,7 +17,7 @@ describe('numberAlgorithms', () => {
 
       it('isPrime(7): should return true', () => {
 
-        const result = numberAlgorithmFnc.isPrime(7);
+        const result = numberAlgorithmFnc.numberIsPrime(7);
 
         expect(result).to.be.an('boolean');
         expect(result).to.be.true;
@@ -25,7 +25,7 @@ describe('numberAlgorithms', () => {
 
       it('isPrime(-100): should return false', () => {
 
-        const result = numberAlgorithmFnc.isPrime(-100);
+        const result = numberAlgorithmFnc.numberIsPrime(-100);
 
         expect(result).to.be.an('boolean');
         expect(result).to.be.false;
@@ -33,7 +33,7 @@ describe('numberAlgorithms', () => {
 
       it('isPrime("hi"): should return false', () => {
 
-        const result = numberAlgorithmFnc.isPrime("hi");
+        const result = numberAlgorithmFnc.numberIsPrime("hi");
 
         expect(result).to.be.an('boolean');
         expect(result).to.be.false;
@@ -44,7 +44,7 @@ describe('numberAlgorithms', () => {
 
       it('greatestCommonDivisor(104, 84): should return 4', () => {
 
-        const result = numberAlgorithmFnc.greatestCommonDivisor(104, 84);
+        const result = numberAlgorithmFnc.numberGreatestCommonDivisor(104, 84);
 
         expect(result).to.be.an('number');
         expect(result).to.equal(4);
@@ -52,7 +52,7 @@ describe('numberAlgorithms', () => {
 
       it('greatestCommonDivisor("bad", "input"), bad input: should return 0', () => {
 
-        const result = numberAlgorithmFnc.greatestCommonDivisor("bad", "input");
+        const result = numberAlgorithmFnc.numberGreatestCommonDivisor("bad", "input");
 
         expect(result).to.be.an('number');
         expect(result).to.equal(0);
@@ -63,7 +63,7 @@ describe('numberAlgorithms', () => {
 
       it('lowestCommonMultiplier(104, 84): should return 2184', () => {
 
-        const result = numberAlgorithmFnc.lowestCommonMultiplier(104, 84);
+        const result = numberAlgorithmFnc.numberLowestCommonMultiplier(104, 84);
 
         expect(result).to.be.an('number');
         expect(result).to.equal(2184);
@@ -71,7 +71,7 @@ describe('numberAlgorithms', () => {
 
       it('lowestCommonMultiplier("bad", "input"): should return 0', () => {
 
-        const result = numberAlgorithmFnc.lowestCommonMultiplier("bad", "input");
+        const result = numberAlgorithmFnc.numberLowestCommonMultiplier("bad", "input");
 
         expect(result).to.be.an('number');
         expect(result).to.equal(0);

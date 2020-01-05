@@ -2,18 +2,17 @@ export default function stringAlgorithms() {
 
   return {
     // TODO: create the following methods:
-    // textEllipsis,
+    // stringTextEllipsis,
     // stringReverse,
-    // checkPalindrome
+    // stringCheckPalindrome
     addNewMethodHere
   }
 
   /**
    * #### Takeaways:
    * - You can add your method to arrayAlgorithms here.
-   + - Please contribute
    * @param {string} str
-   * @example string("hello world");
+   * @example addNewMethodHere("hello world");
    * @returns {array} return string.
    */
   function addNewMethodHere(str = "") {

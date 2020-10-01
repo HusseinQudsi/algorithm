@@ -1,49 +1,39 @@
 # Javascript ES6 Algorithms
 
+NodeJS application featuring a basic algorithms playground, using [docs](https://docs.npmjs.com/), written in Javascript with offline support.
+
 ## Playground
 [javascript-es6-algorithms](https://javascript-es6-algorithms.herokuapp.com/)
 
+## Installation
 
-## Install
+Use node package manager:
+
 ```
 npm install
 ```
 
+## Build scripts
+
+```
+npm run client // Generates playground
+npm run build // transpiler ES6 - to ES5 
+npm run start // Node server
+
+```
+
+## Debugging scripts
+
+```
+npm run dev-brk // Development debugging
+npm run test-client // Algorithms Unit Test used for git hooks
+
+```
+
 ## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-To contribute, work on the source files by adding new Algorithms to existing service or create a new one.
-
-### Build scripts
-
-##### `npm run build`
-
-ES6 compiling
-
-##### `npm run client`
-
-Builds the client web page
-
-##### `npm run start`
-
-Runs the server
-
-##### `npm run client-test`
-
-Development
-
-##### `npm run dev`
-
-### Debugging scripts
-
-Development debugging
-
-##### `npm run dev-brk`
-
-Unit Test debugging
-
-##### `npm run test-client`
-
+Please make sure to update tests as appropriate.
 
 ## License
-
-MIT
+[MIT](https://choosealicense.com/licenses/mit/)

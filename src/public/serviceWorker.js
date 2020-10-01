@@ -1,7 +1,5 @@
 "use strict";
 
-// self.importScripts('./util.js');
-
 var isOnline;
 var version = 170;
 var cachePrefix = 'Javascript-Algorithms-Cache';
@@ -26,11 +24,9 @@ var urlToCache = [
 	// html
 	'/'
 ];
-var onMessage = ({ data }) => {
-	isOnline = (data || {}).isOnline || isOnline;
-};
 
 self.addEventListener("install", () => self.skipWaiting());
+self.addEventListener("fetch", onFetch);
 self.addEventListener("activate", async (evt) => {
 
 	evt.waitUntil(_waitUntil());
@@ -43,40 +39,12 @@ self.addEventListener("activate", async (evt) => {
 	}
 });
 
-self.addEventListener("message", onMessage);
-self.addEventListener("fetch", onFetch);
-
 main().catch((e) => {
-	console.log(e);
+	console.error(e);
 });
 
 async function main() {
-	await sendMessageToClient();
 	await cacheFiles();
-}
-
-async function sendMessageToClient() {
-	try {
-
-		var allClients = await clients.matchAll({
-			includeUncontrolled: true,
-		});
-
-		return Promise.all(
-			allClients.map(function sendTo(client) {
-
-				var chan = new MessageChannel();
-				chan.port1.onmessage = onMessage;
-
-				return client.postMessage('what up! -from Service worker', [chan.port2]);
-			})
-		);
-
-	} catch (e) {
-		debugger;
-	}
-
-	return this;
 }
 
 async function clearOutOldCaches() {
@@ -175,8 +143,6 @@ async function onFetch(evt) {
 
 			if (res && res.ok) {
 
-				// You can add this to cache as well..
-				// await versionCache.put(url, res.clone());
 				return res;
 			}
 

@@ -10,24 +10,22 @@ NodeJS application featuring a basic algorithms playground, using [docs](https:/
 Use node package manager:
 
 ```
-npm install
+npm install # installing node packages
 ```
 
 ## Build scripts
 
 ```
-npm run client // Generates playground
-npm run build // transpiler ES6 - to ES5 
-npm run start // Node server
-
+npm run client # Generates playground
+npm run build # transpiler ES6 - to ES5 
+npm run start # Node server
 ```
 
 ## Debugging scripts
 
 ```
-npm run dev-brk // Development debugging
-npm run test-client // Algorithms Unit Test used for git hooks
-
+npm run dev-brk # Development debugging
+npm run test-client # Algorithms Unit Test used for git hooks
 ```
 
 ## Contributing

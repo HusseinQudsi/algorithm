@@ -77,6 +77,7 @@ async function processFile(data, htmlFile) {
     ));
 
     clientScripts.push(`<script type="text/javascript" src="script/enrichHtml.js"></script>`);
+    clientScripts.push(`<script type="text/javascript" src="script/initSw.js"></script>`);
 
     data = (
       data

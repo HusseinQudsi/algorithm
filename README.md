@@ -1,7 +1,9 @@
-# Offline Support
+# Javascript ES6 Algorithms
 
-NodeJS application highlighting offline support.
+NodeJS application featuring basic algorithms playground, written in Javascript with offline support.
 
+## Playground
+[javascript-es6-algorithms](https://javascript-es6-algorithms.herokuapp.com/)
 
 ## Installation
 
